@@ -1,0 +1,18 @@
+1. Setup git reposity for multiple users access?
+=====================================================================================
+2. I want to push my new data into repo in  server without update(pull) old commit? 
+
+answer:
+======
+	git push --force -u origin master
+
+It will delete all old commits, so be careful. 
+
+=====================================================================================
+3. I want to edit 1 file in my friend repisitory, but i don't want to clone all his repository? 
+
+answer:
+======
+In github server choose file want to edit -> raw -> edit then save result 
+
+=====================================================================================
