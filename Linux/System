@@ -1,0 +1,36 @@
+1. Sao tui không chạy được file execute khi đặt trong ổ đĩa dữ liệu /media/..., chỉ chạy được khi đặt vào  phân vùng của linux
+	Trả lời:
+	=======
+	Để ý khi chạy lệnh "ls -l <file execute>" sẽ thấy chỉ thấy quyền read+write cho root mà thôi, và dù có chmod đi chăng nữa thì chả xi nhê. Đó 	 là vì partion hiện tại không theo định dạng cho linux(VD: FAT32,NTFS,.. linux phải là ext2,ext3,ext4,...). Hết phim!
+
+2. Cho tui một số lệnh để xem thông tin mấy cái phân vùng: tên,kiểu định dạng, dung lượng,..
+	Trả lời:
+	=======
+	Zô trang này 1 đống: http://www.cyberciti.biz/faq/linux-list-disk-partitions-command/
+
+3. Sao terminal của tui không có chức năng tự động complete khi nhấn "tab" zậy?
+	Trả lời:
+	=======
+	Mở file /etc/bash.bashrc bỏ máy cái comment, đóng terminal rồi mở lại là ok!
+
+	# enable bash completion in interactive shells
+	#if [ -f /etc/bash_completion ]; then
+    #	. /etc/bash_completion
+	#fi
+
+4. Bull shit! Ubuntu không có chức năng showDestop như window, y như nhấn zô góc phải màn hình đấy? Mỗi lần muốn quay ra Destop là mệt à!
+	Trả lời:
+	=======
+	Calm down, Ubuntu (Unity) có 1 đống cách:
+
+5. Có cách gì chỉ copy hết file .c từ folder này sang folder khác không ku?
+	Trả lời:
+	=======
+	Of course là có:
+	C1: "cp -avr *.c <source> <destination>" cách này không copy trong mấy folder con đâu nhen!
+    C2: "find <source> -name *.c -type f -exec cp -r {} <destnation> \;" copy ráo tất cả các file trong thư mục con
+6. Tui cho máy của tui cho tụi kia ssh zô. Giờ làm sao biết đứa nào đang ssh zô máy của tui?
+	Trả lời:
+	======
+7. 
+	
