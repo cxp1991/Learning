@@ -16,6 +16,11 @@ answer:
 In github server choose file want to edit -> raw -> edit then save result 
 
 =====================================================================================
+4. Save Username & Password so you needn't type every push into remote
 
+answer:
+======
+	"git config --global credential.helper 'cache --timeout 3600'"
+	"git credential-cache exit": Will reset password
 
 
