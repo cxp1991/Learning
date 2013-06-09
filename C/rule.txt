@@ -13,6 +13,6 @@
 		-	Think header file is just a dictionary, so we just the same as class in c++
 		- 	When write header think it as global and any c source can include it and use
 		- 	With struct: struct name;
-		-	Define variables first then functions
+		-	Define variables first then functions 
 
-	+ Name of header and c source should the same
+	+ Name of header and c source should the same, mostly
