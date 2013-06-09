@@ -1,0 +1,18 @@
+1. Should divide into multiple files: .c, .h respectively to their function
+	
+	+ .h: need use: 
+		-	#ifndef CGI_H_INCLUDED
+			#define CGI_H_INCLUDED
+				...
+			#endif 
+
+			to avoid include multi header files
+
+		-   Declare all global variables will use in .c files respectively, declare functions
+		-	Not include others headers
+		-	Think header file is just a dictionary, so we just the same as class in c++
+		- 	When write header think it as global and any c source can include it and use
+		- 	With struct: struct name;
+		-	Define variables first then functions
+
+	+ Name of header and c source should the same
