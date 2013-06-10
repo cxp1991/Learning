@@ -3,6 +3,7 @@
 	Full http://www.ofb.net/gnu/gdb/gdb_toc.html#TOC34
 	- Breakpoint: 
 		break <line number> if <condition>
+		break <function> if <condition>
 		break <file>:<line number> if <condition>
 		break <file>:<function> if <condition>
 	- Run debug

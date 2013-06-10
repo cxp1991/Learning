@@ -32,5 +32,9 @@
 6. Tui cho máy của tui cho tụi kia ssh zô. Giờ làm sao biết đứa nào đang ssh zô máy của tui?
 	Trả lời:
 	======
-7. 
+7. Tạo patch file?
+	Trả lời:
+	=======
+	$diff -u original.txt new.txt > file.patch
+	$patch < file.patch: apply patch với file original.txt
 	
