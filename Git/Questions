@@ -30,11 +30,17 @@ answer:
 	$git checkout -- <file>
 	$git checkout -f or git reset --HARD: For all files
 =====================================================================================
-6 Show file in stage area?
+6 Show modified files?
 
 answer:
 ======
 	$git diff --name-only
+=====================================================================================
+7 Change last commit message?
+
+answer:
+======
+	$git commit --amend: Then type commit message again
 
 
 
