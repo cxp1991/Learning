@@ -4,7 +4,7 @@
 
 answer:
 ======
-	git push --force -u origin master
+	$git push --force -u origin master
 
 It will delete all old commits, so be careful. 
 
@@ -20,22 +20,21 @@ In github server choose file want to edit -> raw -> edit then save result
 
 answer:
 ======
-	"git config --global credential.helper 'cache --timeout 3600'"
-	"git credential-cache exit": Will reset password
+	$git config --global credential.helper 'cache --timeout 3600'
+	$git credential-cache exit: Will reset password
 =====================================================================================
 5. Ignore modified files before add?
 
 answer:
 ======
-	git checkout -- <file>
-	git checkout -f or git reset --HARD: For all files
+	$git checkout -- <file>
+	$git checkout -f or git reset --HARD: For all files
 =====================================================================================
-6?
+6 Show file in stage area?
 
 answer:
 ======
-	git checkout -- <file>
-	git checkout -f or git reset --HARD: For all files
+	$git diff --name-only
 
 
 

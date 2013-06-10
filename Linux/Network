@@ -1,0 +1,9 @@
+1. Kill process use specific port
+====================================
+answer:
+	$sudo netstat -lnp|grep <port number>
+	$sudo kill <process id>
+vd:
+	$sudo netstat -lnp|grep 8118
+output: tcp        0      0 127.0.0.1:8118          0.0.0.0:*               LISTEN      10989/privoxy
+	$sudo kill 10989 
