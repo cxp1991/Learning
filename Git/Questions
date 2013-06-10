@@ -4,9 +4,7 @@
 
 answer:
 ======
-	$git push --force -u origin master
-
-It will delete all old commits, so be careful. 
+	$git push --force  origin master
 
 =====================================================================================
 3. I want to edit 1 file in my friend repisitory, but i don't want to clone all his repository? 
