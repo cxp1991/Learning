@@ -39,6 +39,12 @@ answer:
 answer:
 ======
 	$git commit --amend: Then type commit message again
+=====================================================================================
+8 Merge last commits into 1?
+
+answer:
+======
+	https://ariejan.net/2011/07/05/git-squash-your-latests-commits-into-one/
 
 
 
