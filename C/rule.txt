@@ -16,3 +16,9 @@
 		-	Define variables first then functions 
 
 	+ Name of header and c source should the same, mostly
+2. String
+	+ Function need return string, use: "static char*"
+	+ "char *str" is exactly like as "const char* str" so cant modify pointed value
+	+ Function paramater always string pointer
+	+ Always initialize for char array & char pointer
+	+ Use pointer when need to operation & array(fix sized) when store data
