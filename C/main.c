@@ -1,25 +1,23 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#define BUFFER_SIZE 500
 
 static char* find_and_replace(char *orig, char *finder, char *replacer)
 {
-	char buffer[5000];
-	char temp1[1000] = "";
-	char temp2[1000] = "";
-	char *reply;
-	int  l_index;
+	char buffer[BUFFER_SIZE];
+	char temp1[BUFFER_SIZE];
+	char temp2[BUFFER_SIZE];
+	char *reply=NULL;
+	int l_index=0;
 
 	memset(buffer,0,sizeof(buffer));
-	reply   = NULL;
-	l_index = 0;
+	memset(temp1,0,sizeof(buffer));
+	memset(temp2,0,sizeof(buffer));
 
 	while(*orig)
 	{
 		// Move html keywords
 		if('<' == *orig)
 		{
-			while(('>' != *orig) && ('\0' != *orig))
+			while(('>' != *orig))
 			{
 				buffer[l_index++] = *orig;
 				orig++;
@@ -29,13 +27,13 @@ static char* find_and_replace(char *orig, char *finder, char *replacer)
 		}
 		else // Get 'real' data & replace
 		{
-			int j;
-			char *p;
+			int   j  = 0;
+			char *p  = NULL;
 			char *p1 = temp1;// original
 			char *p2 = temp2;// modified
 
 			// Get 'real' data
-			while(('<' != *orig) && ('\0' != *orig))
+			while(('<' != *orig))
 			{
 				temp1[j++] = *orig;
 				orig++;
@@ -61,53 +59,5 @@ static char* find_and_replace(char *orig, char *finder, char *replacer)
 	reply = buffer;
 
 	return reply;
-}
-
-int main(void)
-{
-	FILE *file1;
-	FILE *file2;
-	char data[5000];
-	int index1 = 0;
-	int index2 = 0;
-
-	file1 = fopen("/home/ceslab/Desktop/dantri.txt","r");
-	if(NULL == file1)
-	{
-		fprintf(stderr,"Can't open file1!");
-		exit(EXIT_FAILURE);
-	}
-
-	file2 = fopen("/home/ceslab/Desktop/dantri_modified.txt","w");
-	if(NULL == file2)
-	{
-			fprintf(stderr,"Can't open file2!");
-			exit(EXIT_FAILURE);
-	}
-
-	while(!feof(file1))
-	{
-		// Maybe html file greater than data size
-		while(index1 < sizeof(data))
-		{
-			data[index1++] = fgetc(file1);
-		}
-
-		find_and_replace(data," ","_");
-
-		// Write data modified
-		while('\0' != data[index2])
-		{
-			fputc(data[index2++],file2);
-		}
-
-		index1 = 0;
-	}
-
-	fprintf(stdout,"Successfully!");
-	fclose(file1);
-	fclose(file2);
-
-	exit(EXIT_SUCCESS);
 }
 

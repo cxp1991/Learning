@@ -1,5 +1,5 @@
-
 1. Debug with GDB
+   --------------
 	Full http://www.ofb.net/gnu/gdb/gdb_toc.html#TOC34
 	- Breakpoint: 
 		break <line number> if <condition>
@@ -11,9 +11,13 @@
 		step 
 	 	next
 		print <variables>
+
 2. Debug Eclipse gdb as root
+   -------------------------
 	+$sudo visudo
 		add this line: "ceslab ALL=(root) NOPASSWD: /usr/bin/gdb"
 	+ Eclipse->Windows->Prefences->C/C++/Debug->Gdb->Gdb debugger="sudo gdb"
+
 3. Correct C debug wrong order
+   ---------------------------
 	+ In makefile remove order optimization "-O<n>": n = 0,1,2,3...
