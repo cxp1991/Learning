@@ -17,11 +17,14 @@
 
 	+ Name of header and c source should the same, mostly
 
-2. String
-	+ Function need return string, use: "char*"
-	+ "char *str" is exactly like as "const char* str" so cant modify pointed value
-	+ Function paramater always string pointer
-	+ Always initialize for char array & char pointer
-	+ Use pointer when need to operation & array(fix sized) when store data
+2. Chuỗi & ký tự:
+   -------------
+	+ Khai báo mảng ký tự khi các hàm sau này yêu cầu với kích thước được define trước
+	+ Khai báo con trỏ ký tự khi cần trả về một mảng ký tự hoặc khi cần tính toán trung gian
+	+ Mảng ký tự bắt buộc gán bằng '/0' dùng hàm memset khi khai báo
+	+ Con trỏ yêu cầu gán bằng NULL khi khai báo
+	+ Muốn thêm một chuỗi vào một mảng ký tự thì cần thông qua hàm memcpy với con trỏ ký tự
+	+ "char *str" bằng "const char* str" cho nên không thể thay đổi giá trị mà con trỏ đang trỏ dến
+	+ Một hàm có đối số nhận vào là chuỗi thì dùng "char *str"
 
-3. Call functions in if & while statement if return value of functions are "success" or "failed"
+3. Gọi hàm trong các câu lệnh if & while khi và chỉ khi hàm được gọi có kiểu trả về mang ý nghĩa là "thành công" hoặc "thất bại"
