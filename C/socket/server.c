@@ -10,19 +10,19 @@ int main(int argc , char *argv[])
 {
     char recbuf[BUFFER_SIZE], sendbuf[BUFFER_SIZE];
     char *temp = NULL;
-	int socket_desc , new_socket;
-	struct sockaddr_in server , client;
- 	socklen_t sock_size;
+    int socket_desc , new_socket;
+    struct sockaddr_in server , client;
+    socklen_t sock_size;
     
-	memset(recbuf,'\0',sizeof(recbuf));
-	memset(sendbuf,'\0',sizeof(sendbuf));
+    memset(recbuf,'\0',sizeof(recbuf));
+    memset(sendbuf,'\0',sizeof(sendbuf));
 
     //Create socket
     socket_desc = socket(AF_INET , SOCK_STREAM , 0);
     if (-1 == socket_desc)
     {
         fprintf(stderr,"Could not create socket!\n");
-		return -1;
+	return -1;
     }
      
     server.sin_family = AF_INET;
@@ -54,10 +54,9 @@ int main(int argc , char *argv[])
     //Receive client's message
     if(-1 == read(new_socket, recbuf , sizeof(recbuf)))
     {
-		fprintf(stderr,"Receive failed!\n");
-		return -1;
+	fprintf(stderr,"Receive failed!\n");
+	return -1;
     }
-    
     puts(recbuf);
      
     //Reply to the client
@@ -66,12 +65,11 @@ int main(int argc , char *argv[])
     if(-1 == send(new_socket , sendbuf, sizeof(sendbuf), 0))
     {
         fprintf(stderr,"Send failed!\n");
-		return -1;
+	return -1;
     }
-
     puts("Sended!");
     
-	close(socket_desc);
+    close(socket_desc);
     close(new_socket);
      
     return 0;
