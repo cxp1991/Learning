@@ -32,3 +32,4 @@
 	+ Undefine behavier:https://www.securecoding.cert.org/confluence/display/seccode/STR30-C.+Do+not+attempt+to+modify+string+literals
 
 3. Gọi hàm trong các câu lệnh if & while khi và chỉ khi hàm được gọi có kiểu trả về mang ý nghĩa là "thành công" hoặc "thất bại"
+4. Hàm "while(<condition>) i++" sẽ dễ hơn khi debug vì eclipse sẽ tự động nhảy tới kết thúc luôn.

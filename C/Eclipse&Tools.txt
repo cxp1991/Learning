@@ -22,3 +22,4 @@
    ---------------------------
 	+ In makefile remove order optimization "-O<n>": n = 0,1,2,3...
 4. Task tags: Eclipse->Windows->Prefences->C/C++->task tags
+5. Search & replace in specify lines, eclipe supports. So just type Ctrl + F then you can see 
